@@ -151,14 +151,6 @@ public class AdminController {
 
         String ipAddress = IpUtil.getIpAddr(request);
 
-        /**
-         * 取得使用帳號 重複檢查，以防萬一，備而不用
-         */
-
-        if (principal == null) {
-            return CommonResult.unauthorized(null);
-        }
-
         String username = principal.getName();
         User user = userRepository.findActiveUserByUsername(username)
                 .orElseThrow(() -> new UsernameNotFoundException("User Not Found: " + username));
@@ -218,14 +210,6 @@ public class AdminController {
         sw.start("admin list Start");
         String ipAddress = IpUtil.getIpAddr(request);
 
-        /**
-         * 取得使用帳號 重複檢查，以防萬一，備而不用
-         */
-
-        if (principal == null) {
-            return CommonResult.unauthorized(null);
-        }
-
         String username = principal.getName();
         User user = userRepository.findActiveUserByUsername(username)
                 .orElseThrow(() -> new UsernameNotFoundException("User Not Found: " + username));
@@ -263,14 +247,6 @@ public class AdminController {
         sw.start("updateStatus Start");
         String ipAddress = IpUtil.getIpAddr(request);
 
-        /**
-         * 取得使用帳號 重複檢查，以防萬一，備而不用
-         */
-
-        if (principal == null) {
-            return CommonResult.unauthorized(null);
-        }
-
         String username = principal.getName();
         User user = userRepository.findActiveUserByUsername(username)
                 .orElseThrow(() -> new UsernameNotFoundException("User Not Found: " + username));
@@ -307,14 +283,6 @@ public class AdminController {
         StopWatch sw = new StopWatch();
         sw.start("updateStatus Start");
         String ipAddress = IpUtil.getIpAddr(request);
-
-        /**
-         * 取得使用帳號 重複檢查，以防萬一，備而不用
-         */
-
-        if (principal == null) {
-            return CommonResult.unauthorized(null);
-        }
 
         String username = principal.getName();
         User user = userRepository.findActiveUserByUsername(username)
@@ -378,14 +346,6 @@ public class AdminController {
         sw.start("updateStatus Start");
         String ipAddress = IpUtil.getIpAddr(request);
 
-        /**
-         * 取得使用帳號 重複檢查，以防萬一，備而不用
-         */
-
-        if (principal == null) {
-            return CommonResult.unauthorized(null);
-        }
-
         String username = principal.getName();
         User updateUser = userRepository.findActiveUserByUsername(username)
                 .orElseThrow(() -> new UsernameNotFoundException("User Not Found: " + username));
@@ -426,14 +386,6 @@ public class AdminController {
         sw.start("updateStatus Start");
         String ipAddress = IpUtil.getIpAddr(request);
 
-        /**
-         * 取得使用帳號 重複檢查，以防萬一，備而不用
-         */
-
-        if (principal == null) {
-            return CommonResult.unauthorized(null);
-        }
-
         String username = principal.getName();
         User user = userRepository.findActiveUserByUsername(username)
                 .orElseThrow(() -> new UsernameNotFoundException("User Not Found: " + username));
@@ -470,14 +422,6 @@ public class AdminController {
         sw.start("updateStatus Start");
         String ipAddress = IpUtil.getIpAddr(request);
 
-        /**
-         * 取得使用帳號 重複檢查，以防萬一，備而不用
-         */
-
-        if (principal == null) {
-            return CommonResult.unauthorized(null);
-        }
-
         String username = principal.getName();
         User user = userRepository.findActiveUserByUsername(username)
                 .orElseThrow(() -> new UsernameNotFoundException("User Not Found: " + username));
@@ -513,13 +457,6 @@ public class AdminController {
         sw.start("updateStatus Start");
         String ipAddress = IpUtil.getIpAddr(request);
 
-        /**
-         * 取得使用帳號 重複檢查，以防萬一，備而不用
-         */
-
-        if (principal == null) {
-            return CommonResult.unauthorized(null);
-        }
         String username = principal.getName();
         User user = userRepository.findActiveUserByUsername(username)
                 .orElseThrow(() -> new UsernameNotFoundException("User Not Found: " + username));
